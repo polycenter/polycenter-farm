@@ -484,13 +484,83 @@ export const supportedPools = [
       1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
     },
     tokenAddresses: {
-      1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // Token, i.e. "DAI"
+      1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // "FUR"
       
     },
     name: 'Fur Party!',
     symbol: 'FUR-ETH LP',
     tokenSymbol: 'DAI',
     icon: '🐾',
+  },
+  {
+    pid: 1,
+    lpAddresses: {
+      1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
+      
+    },
+    name: 'Dai Duck!',
+    symbol: 'Dai-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: '🦆',
+  },
+  {
+    pid: 2,
+    lpAddresses: {
+      1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0xdac17f958d2ee523a2206206994597c13d831ec7', // "Tether"
+      
+    },
+    name: 'Tether Turtle!',
+    symbol: 'USDT-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: '🐢',
+  },
+  {
+    pid: 3,
+    lpAddresses: {
+      1: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', // "YFI"
+      
+    },
+    name: 'Yearn Yak!',
+    symbol: 'YFI-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: '🐂',
+  },
+  {
+    pid: 4,
+    lpAddresses: {
+      1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0x514910771af9ca656af840dff83e8264ecf986ca', // "LINK"
+      
+    },
+    name: 'Link Lizard!',
+    symbol: 'LINK-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: '🦎',
+  },
+  {
+    pid: 5,
+    lpAddresses: {
+      1: '0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // "UDSC"
+      
+    },
+    name: 'UDSC Umbrella!',
+    symbol: 'UDSC-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: '☂️',
   },
 ]
 
