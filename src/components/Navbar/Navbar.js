@@ -1,11 +1,12 @@
 import React, { useContext, Component } from "react";
 
 /* import Context from "../../Context/ReactContext"; */
-
+import catlogo from "../../images/cat.gif";
 
 //temp
 import { useWallet } from 'use-wallet'
-
+import { Switch } from 'ui-neumorphism';
+import 'ui-neumorphism/dist/index.css'
 //style
 import "./NavbarStyle.scss";
 
@@ -31,81 +32,69 @@ const Navbar = (props) => {
 
   return (
 
+    <nav>
+    <div class="nav-wrapper position-relative">
+      
+      
+      <nav-links>
+        <ul>
+        <img className="catToken" src={catlogo} alt="logo" />
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
+          </li>
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} to="/about">ABOUT</Link>
+          </li>
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} to="/chart">PRICE</Link>
+          </li>
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} to="/team">TEAM</Link>
+          </li>
 
+          <li>
+            <a
+              style={{color: "rgb(15, 224, 15)"}}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
+            >
+              TRADE
+            </a>
+          </li>
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/stake">
+            VAULT
+            </Link>
+          </li>
+          <li>
+            <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
+              FARMS
+            </a>
+          </li>
+          
+          <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
+            <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
+            <label className="onoffswitch-label" htmlFor="myonoffswitch">
+              <span className="onoffswitch-inner"></span>
+              <span className="onoffswitch-switch"></span>
+            </label>
+          </Switch>
 
+          {/* </>
+          )}
+          <li>
+            <MetaMaskButton />
+          </li> */}
+        </ul>
+      </nav-links>
+    </div>
+    <ul><label className="account-address">{account}</label></ul>
+  </nav>
+  
+    
 
-    <nav style={{
-      zIndex: '9999',
-      boxShadow: isNight ? '-1px 13px 11px -12px rgba(87, 101, 116,0.4)' : '-1px 13px 11px -12px rgba(54, 54, 54, 0.4)'
-    }}>
-      <div className="contain">
-
-        <img src={logophoto} alt="logo" />
-        <div className="" style={{ marginLeft: "auto" }}></div>
-        <nav-links>
-          <ul>
-            {/*   {myContext.maskAccount && (
-              <> */}
-            <li>
-              <a href="https://fur.finance/">HOME</a>
-            </li>
-            <li>
-              <a href="https://fur.finance/about">ABOUT</a>
-            </li>
-            <li>
-              <a href="https://fur.finance/chart">PRICE</a>
-            </li>
-            <li>
-              <a href="https://fur.finance/team">TEAM</a>
-            </li>
-
-            <li>
-              <a
-                className="tradeBTN"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://app.uniswap.org/#/swap?outputCurrency=0xffb0b6b3845c79c4d1fb54552ac6f5fef96c18fd"
-              >
-                TRADE
-              </a>
-            </li>
-            <li>
-              <a className="stakeBTN" href="https://fur.finance/stake">
-                STAKE
-              </a>
-            </li>
-            <li>
-              <a className="stakeBTN" href="https://app.fur.finance">
-                FARM
-              </a>
-            </li>
-            <li className="onoffswitch">
-
-
-              <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" onChange={e => setNight(!isNight)} id="myonoffswitch" />
-              <label className="onoffswitch-label" htmlFor="myonoffswitch">
-                <span className="onoffswitch-inner"></span>
-                <span className="onoffswitch-switch"></span>
-              </label>
-            </li>
-
-            <ul><label className="account-address">{account}</label></ul>
-
-
-
-
-
-
-
-            {/* </>
-            )}
-            <li>
-              <MetaMaskButton />
-            </li> */}
-          </ul>
-        </nav-links>
-      </div>
-    </nav>
+    
   );
 };
 

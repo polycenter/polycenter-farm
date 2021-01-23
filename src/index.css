@@ -172,21 +172,87 @@ code {
 }
 
 .bg {
-  background: url('./assets/img/bg.jpg') repeat;
-  background-size: 10%;
+  background: #e4ebf5;
+  padding-bottom: 135px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .nt {
-  background-color: #222f3e;
+  background-color: #161b22;
+  
+  text-shadow: horizontal-shadow vertical-shadow blur rgb(255, 0, 200);
+  padding-bottom: 135px;
 }
 
 .color {
+  text-align: center;
   color: #4D3A40;
 }
 
 .img-logo {
   width: 45%;
   margin-bottom: 12px;
+}
+
+.mainCard {
+  
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0 auto;
+  width: 36rem;
+  height: 27.5rem;
+}
+
+.seeTheMenu {
+  background-color: transparent;
+}
+
+.card {
+  background-color: transparent;
+}
+
+.catImg {
+  display: flex;
+  justify-content: center;
+}
+
+.balances1 {
+  padding: 1rem;
+  margin: 1rem;
+  animation: color-change 5s infinite;
+ color: rgb(26, 117, 117);
+  background-color: transparent;
+}
+
+.balances2 {
+  padding: 1rem;
+  margin: 1rem;
+  animation: color-change 5s infinite;
+ color:rgb(26, 117, 117);
+  background-color: transparent;
+}
+
+@keyframes color-change {
+  14% { color: rgb(37, 150, 150); }
+  28% { color: rgb(224, 18, 196); }
+  42% { color: rgb(190, 0, 0); }
+  56% { color: rgba(0, 255, 0, 0.39); }
+  70% { color: rgba(0, 0, 255, 0.589); }
+  84% { color: indigo; }
+  100% { color: rgba(238, 130, 238, 0.521); }
+  
+}
+
+.menuBtn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;   
+  margin-top: 5rem;
+  margin-bottom: .5rem;
 }
 
 @media only screen and (max-width: 992px) {

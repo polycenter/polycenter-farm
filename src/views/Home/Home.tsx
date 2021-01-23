@@ -1,37 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/img/logo.png'
-import Button from '../../components/Button'
 import Container from '../../components/Container'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import Spacer from '../../components/Spacer'
 import { Link } from 'react-router-dom';
+import { Card, Button } from 'ui-neumorphism'
+import 'ui-neumorphism/dist/index.css'
 import Balances from './components/Balances'
 import Logo from '../../assets/img/img.png'
+import catHeart from '../../images/catHeart.gif'
+
 
 const Home: React.FC = () => {
   return (
-    <Page>
-      <img src={Logo} alt="Logo" className="img-logo" />
-      <Container>
+    <div className="mainCard">
+  
+    <Card className="card">
+    <div className="catImg">
+      <img src={catHeart} alt="cat doing math" height="100" width="100" />
+    </div>
+
         <Balances />
-      </Container>
-      <Spacer size="lg" />
-      <StyledInfo>
-        <p className="color">🏆<b>Pro Tip</b>: FUR-ETH LP token pool yields 4.8x more token
-        rewards per block.</p>
-      </StyledInfo>
-      <Spacer size="lg" />
-      <div
-        style={{
-          margin: '0 auto',
-        }}
-      >
-        <Link to={"/farms"} className="btn-link">🔪 See the Menu</Link>
-        <div style={{ marginBottom: '60px' }} />
-      </div>
-    </Page>
+        <div className="menuBtn"><Button><Link to={"/farms"} style={{ color: 'lime' }} >🔪 See the Menu</Link></Button></div>
+     </Card>
+     
+      
+   
+    
+       
+        
+   
+    
+    </div>
   )
 }
 

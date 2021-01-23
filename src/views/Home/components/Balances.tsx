@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import styled from 'styled-components'
 import { useWallet } from 'use-wallet'
-import Card from '../../../components/Card2'
+
 import CardContent from '../../../components/CardContent'
 import Label from '../../../components/Label'
 import Spacer from '../../../components/Spacer'
@@ -16,6 +16,7 @@ import useTokenBalance from '../../../hooks/useTokenBalance'
 import useSushi from '../../../hooks/useSushi'
 import { getSushiAddress, getSushiSupply } from '../../../sushi/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+import { Card } from 'ui-neumorphism'
 
 const PendingRewards: React.FC = () => {
   const [start, setStart] = useState(0)
@@ -87,31 +88,33 @@ const Balances: React.FC = () => {
 
   return (
     <StyledWrapper>
-      <Card>
+      <Card inset className="balances1">
         <CardContent>
           <StyledBalances>
-            <StyledBalance>
-              <SushiIcon />
-              <Spacer />
+            
+              
+              
               <div style={{ flex: 1 }}>
                 <Label text="Your YFUR Balance" />
                 <Value
                   value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
                 />
               </div>
-            </StyledBalance>
+            
           </StyledBalances>
         </CardContent>
         <Footnote>
-          Pending harvest
+          {'Pending harvest '} 
+          <div />
           <FootnoteValue>
-            <PendingRewards /> YFUR
+            <PendingRewards /> 
+            {'YFUR ' + ' '}
           </FootnoteValue>
         </Footnote>
       </Card>
       <Spacer />
 
-      <Card>
+      <Card inset className="balances2">
         <CardContent>
           <Label text="Total YFUR Supply" />
           <Value
@@ -119,7 +122,8 @@ const Balances: React.FC = () => {
           />
         </CardContent>
         <Footnote>
-          New rewards per block
+          New rewards per block 
+          <div />
           <FootnoteValue>10 YFUR</FootnoteValue>
         </Footnote>
       </Card>
