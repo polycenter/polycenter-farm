@@ -1,11 +1,12 @@
 body {
-  background: #fff8ee;
+  background: #e4ebf5;
   color: lime;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 10rem;
 }
 
 code {
