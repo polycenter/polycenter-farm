@@ -1,6 +1,13 @@
+import React from 'react'
 import BigNumber from 'bignumber.js/bignumber'
-
+import { catImg } from './base64images/cat'
+import { fishbone } from './base64images/fishbone'
+import { paw } from './base64images/paw'
+import { eye } from './base64images/eye'
+import { yarn } from './base64images/yarn'
+import { can } from './base64images/can'
 export const SUBTRACT_GAS_LIMIT = 100000
+
 
 const ONE_MINUTE_IN_SECONDS = new BigNumber(60)
 const ONE_HOUR_IN_SECONDS = ONE_MINUTE_IN_SECONDS.times(60)
@@ -487,10 +494,10 @@ export const supportedPools = [
       1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // "FUR"
       
     },
-    name: 'Fur Party!',
+    name: 'Looking Fur Group',
     symbol: 'FUR-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '🐾',
+    icon: <img src={catImg} width="78" height="78"/>
   },
   {
     pid: 1,
@@ -501,10 +508,10 @@ export const supportedPools = [
       1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
       
     },
-    name: 'Dai Duck!',
+    name: "Fish is \n Dai'd 😿",
     symbol: 'Dai-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '🦆',
+    icon: <img src={fishbone} width="80" height="80"/>,
   },
   {
     pid: 2,
@@ -515,10 +522,10 @@ export const supportedPools = [
       1: '0xdac17f958d2ee523a2206206994597c13d831ec7', // "Tether"
       
     },
-    name: 'Tether Turtle!',
+    name: 'mOnEy pRinteR!!!!',
     symbol: 'USDT-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '🐢',
+    icon: <img src={paw} width="75" height="75"/>
   },
   {
     pid: 3,
@@ -529,10 +536,10 @@ export const supportedPools = [
       1: '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', // "YFI"
       
     },
-    name: 'Yearn Yak!',
+    name: 'Y-F-EYE',
     symbol: 'YFI-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '🐂',
+    icon: <img src={eye} width="75" height="75"/>
   },
   {
     pid: 4,
@@ -543,10 +550,10 @@ export const supportedPools = [
       1: '0x514910771af9ca656af840dff83e8264ecf986ca', // "LINK"
       
     },
-    name: 'Link Lizard!',
+    name: 'Yarn Link',
     symbol: 'LINK-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '🦎',
+    icon: <img src={yarn} width="70" height="70"/>
   },
   {
     pid: 5,
@@ -557,10 +564,10 @@ export const supportedPools = [
       1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // "UDSC"
       
     },
-    name: 'UDSC Umbrella!',
-    symbol: 'UDSC-ETH LP',
+    name: 'Made in America',
+    symbol: 'USDC-ETH LP',
     tokenSymbol: 'DAI',
-    icon: '☂️',
+    icon: <img src={can} width="70" height="70"/>
   },
 ]
 

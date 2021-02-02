@@ -40,7 +40,7 @@ const UnstakeXSushi: React.FC<HarvestProps> = ({ lpContract }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>🐾</CardIcon>
+            <CardIcon>🐱</CardIcon>
             <Value value={getBalanceNumber(xSushiBalance)} />
             <Label text="xSUSHI (SushiBar) Available" />
           </StyledCardHeader>

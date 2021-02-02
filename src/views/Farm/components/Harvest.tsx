@@ -9,6 +9,7 @@ import Value from '../../../components/Value'
 import useEarnings from '../../../hooks/useEarnings'
 import useReward from '../../../hooks/useReward'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+import cat from '../../../assets/img/CAT.png'
 
 interface HarvestProps {
   pid: number
@@ -20,15 +21,16 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
   const { onReward } = useReward(pid)
 
   return (
-    <Card>
-      <CardContent>
-        <StyledCardContentInner>
-          <StyledCardHeader>
-            <CardIcon>🐾</CardIcon>
+    <Card >
+      <CardContent >
+        <StyledCardContentInner style={{color: 'lime' }}>
+          <StyledCardHeader style={{color: 'lime' }}>
+            <CardIcon >🐱</CardIcon>
             <Value value={getBalanceNumber(earnings)} />
             <Label text="YFUR Earned" />
           </StyledCardHeader>
-          <StyledCardActions>
+          <StyledCardActions 
+            style={{color: 'lime' }}>
             <button type="button"
               style={{ fontSize: '16px' }}
               className="btn-link"
@@ -49,11 +51,13 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
 }
 
 const StyledCardHeader = styled.div`
+  color: lime;
   align-items: center;
   display: flex;
   flex-direction: column;
 `
 const StyledCardActions = styled.div`
+color: lime;
   display: flex;
   justify-content: center;
   margin-top: ${(props) => props.theme.spacing[6]}px;
@@ -61,11 +65,13 @@ const StyledCardActions = styled.div`
 `
 
 const StyledSpacer = styled.div`
+color: lime;
   height: ${(props) => props.theme.spacing[4]}px;
   width: ${(props) => props.theme.spacing[4]}px;
 `
 
 const StyledCardContentInner = styled.div`
+color: lime;
   align-items: center;
   display: flex;
   flex: 1;

@@ -4,7 +4,8 @@ import Countdown, { CountdownRenderProps } from 'react-countdown'
 import styled, { keyframes } from 'styled-components'
 import { useWallet } from 'use-wallet'
 import Button from '../../../components/Button'
-import Card from '../../../components/Card3'
+import { Card } from 'ui-neumorphism'
+import 'ui-neumorphism/dist/index.css'
 import { Link } from 'react-router-dom'
 import CardContent from '../../../components/CardContent'
 import CardIcon from '../../../components/CardIcon'
@@ -130,12 +131,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 
   return (
-    <StyledCardWrapper>
+    <StyledCardWrapper className="cardContainer">
+
       {farm.tokenSymbol === 'DAI' && <StyledCardAccent />}
-      <Card>
+      <Card className="farmCards">
         <CardContent>
           <StyledContent>
-            <CardIcon>{farm.icon}</CardIcon>
+            <CardIcon >{farm.icon}</CardIcon>
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>
               <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
@@ -155,8 +157,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
             </Link>
             <StyledInsight>
-              <span>APY</span>
-              <span>
+              <StyledInsight className="apy" style={{ color: 'lightpurple', marginBottom: '10%' }}>APY
+              
                 {farm.apy
                   ? `${farm.apy
                     .times(new BigNumber(100))
@@ -165,19 +167,20 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                     .toLocaleString('en-US')
                     .slice(0, -1)}%`
                   : 'Loading ...'}
-              </span>
-              {/* <span>
+              
+              </StyledInsight>
+              <StyledInsight style={{ marginBottom: '10%' }}>
                 {farm.tokenAmount
                   ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
                   : '-'}{' '}
                 {farm.tokenSymbol}
-              </span>
-              <span>
+              </StyledInsight>
+              <StyledInsight style={{ marginBottom: '10%' }}>
                 {farm.wethAmount
                   ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
                   : '-'}{' '}
                 ETH
-              </span> */}
+              </StyledInsight>
             </StyledInsight>
           </StyledContent>
         </CardContent>
@@ -259,15 +262,30 @@ const StyledCardWrapper = styled.div`
 `
 
 const StyledTitle = styled.h4`
-  color: ${(props) => props.theme.color.grey[600]};
+  animation: color-change 7s infinite;
+  color: lime;
   font-size: 24px;
   font-weight: 700;
   margin: ${(props) => props.theme.spacing[2]}px 0 0;
   padding: 0;
   text-align: center;
+
+  @keyframes color-change {
+    14% { color: rgb(37, 150, 150); }
+    28% { color: rgb(224, 18, 196); }
+    42% { color: rgb(190, 0, 0); }
+    56% { color: rgba(0, 255, 0, 0.39); }
+    70% { color: rgba(0, 0, 255, 0.589); }
+    84% { color: indigo; }
+    100% { color: rgba(238, 130, 238, 0.521); }
+    
+  }
 `
 
 const StyledContent = styled.div`
+
+  
+  color: lime;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -281,11 +299,13 @@ const StyledSpacer = styled.div`
 const StyledDetails = styled.div`
   margin-top: ${(props) => props.theme.spacing[2]}px;
   text-align: center;
+ 
 `
 
 const StyledDetail = styled.div`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime;
   text-align: center;
+  
 `
 
 const StyledInsight = styled.div`
@@ -294,7 +314,7 @@ const StyledInsight = styled.div`
   box-sizing: border-box;
   border-radius: 8px;
   background: #fffdfa;
-  color: #aa9584;
+  color: lime;
   width: 100%;
   margin-top: 12px;
   line-height: 32px;
@@ -302,6 +322,7 @@ const StyledInsight = styled.div`
   border: 1px solid #e6dcd5;
   text-align: center;
   padding: 0 12px;
+  background-color: transparent;
 `
 
 export default FarmCards
