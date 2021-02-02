@@ -193,14 +193,14 @@ code {
 }
 
 .mainCard {
-  
+ 
   display: flex;
   justify-content: center;
   background-color: transparent;
   margin: 0 auto;
   margin-top: 5%;
   width: 36rem;
-  height: 27.5rem;
+  height: 0 auto;
   
 }
 
@@ -298,8 +298,10 @@ Card {
     and (orientation: portrait) { 
 
     .mainCard {
+      display: block;
+      margin: 0 auto;
       bottom-padding: 20rem;
-      height: 50rem;
+      height: 100rem;
     }
     /* styles */
 }
@@ -312,10 +314,36 @@ Card {
     and (-webkit-device-pixel-ratio: 2) 
     and (orientation: portrait) { 
 
-       .balances1 {
-         border: 2px solid red;
+     
+        .card {
+          border: 2px solid red;
+          display: block;
+          width: 0 auto;
+        }
+       .mainCard {
+         display: block;
+         margin: 0 auto;
+         height: 50rem;
        }
 
  
     /* styles */
 }
+
+@media only screen 
+    and (min-device-width: 785px) 
+    and (min-device-height: 767px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+      .mainCard {
+        border: 2px solid red;
+        display: block;
+        margin: 0 auto;
+        height: 50rem;
+      }
+
+      .card {
+        height: 500rem;
+      }
+    }
