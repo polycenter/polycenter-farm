@@ -6,7 +6,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-bottom: 10rem;
+  
 }
 
 code {
@@ -169,13 +169,17 @@ code {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-bottom: 20rem;
+  height: 0 auto;
+ 
+  
 }
 
 .nt {
   background-color: #161b22;
   
   text-shadow: horizontal-shadow vertical-shadow blur rgb(255, 0, 200);
-  padding-bottom: 135px;
+  padding-bottom: 25rem;
 }
 
 .color {
@@ -266,6 +270,8 @@ Card {
   margin-bottom: .5rem;
 }
 
+
+
 @media only screen and (max-width: 992px) {
   .img-logo {
     width: 80%;
@@ -274,4 +280,42 @@ Card {
   .svg-top{
     margin-top: 240px;
   }
+}
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+    /* styles */
+}
+
+/* iPhone XR */
+@media only screen 
+    and (min-device-width: 414px) 
+    and (min-device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+    .mainCard {
+      bottom-padding: 20rem;
+      height: 50rem;
+    }
+    /* styles */
+}
+
+/* iPhone X */
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+       .balances1 {
+         border: 2px solid red;
+       }
+
+ 
+    /* styles */
 }
