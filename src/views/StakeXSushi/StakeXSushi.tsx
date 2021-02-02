@@ -89,6 +89,7 @@ const StyledFarm = styled.div`
 `
 
 const StyledCardsWrapper = styled.div`
+color: lime;
   display: flex;
   width: 600px;
   @media (max-width: 768px) {
@@ -108,7 +109,7 @@ const StyledCardWrapper = styled.div`
 `
 
 const StyledInfo = styled.h3`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime;
   font-size: 16px;
   font-weight: 400;
   margin: 0;

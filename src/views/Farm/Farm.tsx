@@ -122,7 +122,7 @@ const StyledCardWrapper = styled.div`
 `
 
 const StyledInfo = styled.h3`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime;
   font-size: 16px;
   font-weight: 400;
   margin: 0;

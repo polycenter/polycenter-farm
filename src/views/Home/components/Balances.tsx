@@ -87,14 +87,14 @@ const Balances: React.FC = () => {
   }, [sushi, setTotalSupply])
 
   return (
-    <StyledWrapper>
+    <TheDiv>
       <Card inset className="balances1">
         <CardContent>
           <StyledBalances>
             
               
               
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 1,}} >
                 <Label text="Your YFUR Balance" />
                 <Value
                   value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
@@ -127,7 +127,7 @@ const Balances: React.FC = () => {
           <FootnoteValue>10 YFUR</FootnoteValue>
         </Footnote>
       </Card>
-    </StyledWrapper>
+    </TheDiv>
   )
 }
 
@@ -140,9 +140,11 @@ const Footnote = styled.div`
 const FootnoteValue = styled.div`
   font-family: 'Roboto Mono', monospace;
   float: right;
+  color: lime;
 `
 
 const StyledWrapper = styled.div`
+color: lime;
   align-items: center;
   display: flex;
   @media (max-width: 768px) {
@@ -151,6 +153,16 @@ const StyledWrapper = styled.div`
     align-items: stretch;
   }
 `
+const TheDiv = styled.div`
+  align-items: center;
+  display: flex;
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+`
+
 
 const StyledBalances = styled.div`
   display: flex;

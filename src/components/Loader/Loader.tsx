@@ -3,15 +3,16 @@ import styled, { keyframes } from 'styled-components'
 
 import CardIcon from '../CardIcon'
 
+
 interface LoaderProps {
   text?: string
 }
 
 const Loader: React.FC<LoaderProps> = ({ text }) => {
   return (
-    <StyledLoader>
-      <CardIcon>
-        <StyledSushi>🐾</StyledSushi>
+    <StyledLoader >
+      <CardIcon >
+        <StyledSushi>🐱</StyledSushi>
       </CardIcon>
       {!!text && <StyledText>{text}</StyledText>}
     </StyledLoader>
@@ -41,7 +42,7 @@ const StyledSushi = styled.div`
 `
 
 const StyledText = styled.div`
-  color: ${(props) => props.theme.color.grey[600]};
+ color：'lime'
 `
 
 export default Loader

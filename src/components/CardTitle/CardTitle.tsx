@@ -6,11 +6,11 @@ interface CardTitleProps {
 }
 
 const CardTitle: React.FC<CardTitleProps> = ({ text }) => (
-  <StyledCardTitle>{text}</StyledCardTitle>
+  <StyledCardTitle style={{color: 'lime'}}>{text}</StyledCardTitle>
 )
 
 const StyledCardTitle = styled.div`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime
   font-size: 18px;
   font-weight: 700;
   padding: ${(props) => props.theme.spacing[4]}px;

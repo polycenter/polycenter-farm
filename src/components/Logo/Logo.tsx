@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../../assets/img/logo.png'
+
 
 const Logo: React.FC = () => {
   return (
     <StyledLogo to="/">
-      <img src={logo} height="32" style={{ marginTop: -4 }} />
+      
       <StyledText>
         FurSwap
       </StyledText>
@@ -15,6 +15,7 @@ const Logo: React.FC = () => {
 }
 
 const StyledLogo = styled(Link)`
+color: lime
   align-items: center;
   display: flex;
   justify-content: center;
@@ -26,7 +27,7 @@ const StyledLogo = styled(Link)`
 `
 
 const StyledText = styled.span`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime
   font-family: 'Reem Kufi', sans-serif;
   font-size: 20px;
   font-weight: 700;

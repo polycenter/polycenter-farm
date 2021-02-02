@@ -36,21 +36,15 @@ const Navbar = (props) => {
     <div class="nav-wrapper position-relative">
       
       
-      <nav-links>
+      <nav-links style={{textAlign: 'center', display: 'flex', justifyContent: 'center'}}>
         <ul>
-        <img className="catToken" src={catlogo} alt="logo" />
+        
           <li>
             <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
           </li>
-          <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} to="/about">ABOUT</Link>
-          </li>
-          <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} to="/chart">PRICE</Link>
-          </li>
-          <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} to="/team">TEAM</Link>
-          </li>
+          
+         
+        
 
           <li>
             <a
@@ -89,7 +83,7 @@ const Navbar = (props) => {
         </ul>
       </nav-links>
     </div>
-    <ul><label className="account-address">{account}</label></ul>
+    {/* <ul><label className="account-address">{account}</label></ul> */}
   </nav>
   
     
