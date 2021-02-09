@@ -1,6 +1,6 @@
-body > #root > div {
+/* body > #root > div {
   height: 180vh;
-}
+} */
 
 body {
   background: #e4ebf5;
@@ -182,7 +182,7 @@ code {
 .nt {
   background-color: #161b22;
   text-shadow: horizontal-shadow vertical-shadow blur rgb(255, 0, 200);
-  padding-bottom: 25rem;
+  padding-bottom: 15rem;
 }
 
 .nt .mainCard {
@@ -275,10 +275,18 @@ Card {
   justify-content: center;
   margin: 0 auto;   
   margin-top: 5%;
-  /* margin-bottom: 25%; */
+  margin-bottom: 5%;
   background: transparent;
 }
 
+
+@media only screen 
+    and (max-width: 2560px)
+    and (min-height: 1600px) {
+      .nt {
+        padding-bottom: 55rem;
+      }
+    }
 
 
 @media only screen and (max-width: 992px) {
