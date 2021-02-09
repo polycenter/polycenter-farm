@@ -1,6 +1,6 @@
 body {
   background: #e4ebf5;
-  color: lime;
+  color: rgb(15, 224, 15);
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
@@ -141,7 +141,7 @@ code {
 
 
 .btn-link {
-  color: lime;
+  color: rgb(15, 224, 15);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 1000px;
@@ -162,7 +162,7 @@ code {
 }
 
 .bg {
-  color: lime;
+  color: rgb(15, 224, 15);
   background: #e4ebf5;
   padding-bottom: 135px;
   -webkit-background-size: cover;
@@ -248,12 +248,12 @@ code {
 .farmCards {
   
   margin-top: 15%;
-  color: lime;
+  color: rgb(15, 224, 15);
   background-color: transparent;
 }
 
 Card {
-  color: lime;
+  color: rgb(15, 224, 15);
 }
 .cardContainer {
  

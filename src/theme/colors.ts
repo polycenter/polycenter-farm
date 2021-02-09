@@ -22,12 +22,12 @@ export const grey = {
   100: 'transparent',
   200: 'white',
   300: '#e2d6cf',
-  400: 'lime',
-  500: 'lime',
-  600: 'lime',  //blue
-  800: 'lime',
+  400: 'rgb(15, 224, 15)',
+  500: 'rgb(15, 224, 15)',
+  600: 'rgb(15, 224, 15)',  //blue
+  800: 'rgb(15, 224, 15)',
 
-  900: 'lime', //Text color blue
+  900: 'rgb(15, 224, 15)', //Text color blue
   1000: 'transparent', //Yellow cards
-  1100: 'lime', //Orangish color
+  1100: 'rgb(15, 224, 15)', //Orangish color
 }
