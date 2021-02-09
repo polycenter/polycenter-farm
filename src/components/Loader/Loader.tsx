@@ -42,7 +42,7 @@ const StyledSushi = styled.div`
 `
 
 const StyledText = styled.div`
- color：'lime'
+ color：'rgb(15, 224, 15)'
 `
 
 export default Loader

@@ -23,14 +23,14 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
   return (
     <Card >
       <CardContent >
-        <StyledCardContentInner style={{color: 'lime' }}>
-          <StyledCardHeader style={{color: 'lime' }}>
+        <StyledCardContentInner style={{color: 'rgb(15, 224, 15)' }}>
+          <StyledCardHeader style={{color: 'rgb(15, 224, 15)' }}>
             <CardIcon >🐱</CardIcon>
             <Value value={getBalanceNumber(earnings)} />
             <Label text="YFUR Earned" />
           </StyledCardHeader>
           <StyledCardActions 
-            style={{color: 'lime' }}>
+            style={{color: 'rgb(15, 224, 15)' }}>
             <button type="button"
               style={{ fontSize: '16px' }}
               className="btn-link"
@@ -51,13 +51,13 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
 }
 
 const StyledCardHeader = styled.div`
-  color: lime;
+  color: rgb(15, 224, 15);
   align-items: center;
   display: flex;
   flex-direction: column;
 `
 const StyledCardActions = styled.div`
-color: lime;
+color: rgb(15, 224, 15);
   display: flex;
   justify-content: center;
   margin-top: ${(props) => props.theme.spacing[6]}px;
@@ -65,13 +65,13 @@ color: lime;
 `
 
 const StyledSpacer = styled.div`
-color: lime;
+color: rgb(15, 224, 15);
   height: ${(props) => props.theme.spacing[4]}px;
   width: ${(props) => props.theme.spacing[4]}px;
 `
 
 const StyledCardContentInner = styled.div`
-color: lime;
+color: rgb(15, 224, 15);
   align-items: center;
   display: flex;
   flex: 1;

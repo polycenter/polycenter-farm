@@ -140,11 +140,11 @@ const Footnote = styled.div`
 const FootnoteValue = styled.div`
   font-family: 'Roboto Mono', monospace;
   float: right;
-  color: lime;
+  color: rgb(15, 224, 15);
 `
 
 const StyledWrapper = styled.div`
-color: lime;
+color: rgb(15, 224, 15);
   align-items: center;
   display: flex;
   @media (max-width: 768px) {
