@@ -1,51 +1,55 @@
 import React, { useContext, Component } from "react";
-
+ 
 /* import Context from "../../Context/ReactContext"; */
 import catlogo from "../../images/cat.gif";
-
+ 
 //temp
-import { useWallet } from 'use-wallet'
+// import { useWallet } from 'use-wallet'
 import { Switch } from 'ui-neumorphism';
 import 'ui-neumorphism/dist/index.css'
 //style
 import "./NavbarStyle.scss";
-
-
-
+ 
+ 
+ 
 //logo
 import logophoto from "../../images/logophoto.png";
-
+ 
 //react router dom
 import { BrowserRouter as Router, Link } from "react-router-dom";
 /* import MetaMaskButton from "../MetaMaskButton/MetaMaskButton"; */
 //
-const Navbar = (props) => {
-  const { isNight, setNight } = props;
+export const Navbar = (props) => {
   /*  var { maskProvider, maskAccount, maskName, parent } = props; */
-
+ 
   /* var myContext = useContext(Context); */
-  const { account, reset } = useWallet()
+  // const { account, reset } = useWallet()
+ 
+  // dark-mode
+  const { isNight, setNight } = props;
 
-
-
-
-
+ 
   return (
-
+ 
     <nav>
     <div class="nav-wrapper position-relative">
-      
-      
+      <div className="dark-mode__toggle">
+        <div
+          onClick={e => setNight(!isNight)}
+          className={isNight ? "toggle toggled" : "toggle"}
+        />
+      </div>
+ 
       <nav-links style={{textAlign: 'center', display: 'flex', justifyContent: 'center'}}>
         <ul>
-        
+ 
           <li>
             <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
           </li>
-          
-         
-        
-
+ 
+ 
+ 
+ 
           <li>
             <a
               style={{color: "rgb(15, 224, 15)"}}
@@ -66,15 +70,12 @@ const Navbar = (props) => {
               FARMS
             </a>
           </li>
-          
-          <Switch onClick={e => setNight(!isNight)} className="onoffswitch">
-            <input name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" />
-            <label className="onoffswitch-label" htmlFor="myonoffswitch">
-              <span className="onoffswitch-inner"></span>
-              <span className="onoffswitch-switch"></span>
-            </label>
-          </Switch>
-
+          <li>
+            <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/groupbuy">
+            GROUP-FI
+            </Link>
+          </li>
+ 
           {/* </>
           )}
           <li>
@@ -85,11 +86,9 @@ const Navbar = (props) => {
     </div>
     {/* <ul><label className="account-address">{account}</label></ul> */}
   </nav>
-  
-    
-
-    
+ 
+ 
+ 
+ 
   );
 };
-
-export default Navbar;

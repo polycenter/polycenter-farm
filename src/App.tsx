@@ -15,7 +15,7 @@ import Farms from './views/Farms'
 import Home from './views/Home'
 import Staking from "./views/Staking";
 import { CHAIN_ID } from './sushi/lib/constants'
-import Navbar from './components/Navbar/Navbar'
+import { Navbar } from './components/Navbar/Navbar'
 import BG from './assets/img/bg.jpg';
 import 'ui-neumorphism/dist/index.css'
 
@@ -51,7 +51,7 @@ const App: React.FC = () => {
           </Switch>
         </Router>
       </Providers>
-      
+
     </div>
   )
 }

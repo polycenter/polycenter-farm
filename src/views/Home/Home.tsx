@@ -23,7 +23,7 @@ const Home: React.FC = () => {
     </div>
 
         <Balances />
-        <div className="menuBtn"><Button><Link to={"/farms"} style={{ color: 'rgb(15, 224, 15)' }} >🔪 See the Menu</Link></Button></div>
+        <div className="menuBtn"><Button className="menuBtn"><Link to={"/farms"} style={{ color: 'rgb(15, 224, 15)' }} >🔪 See the Menu</Link></Button></div>
      </Card>
      
       
