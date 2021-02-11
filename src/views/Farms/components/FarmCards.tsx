@@ -145,7 +145,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             </StyledDetails>
             <Spacer />
             <Link type="button"
-              style={{ fontSize: '16px' }}
+              
+              style={{ fontSize: '16px', pointerEvents: 'none' }}
               className="btn-link"
               to={`/farms/${farm.id}`}
             >{poolActive ? 'Select' : undefined}

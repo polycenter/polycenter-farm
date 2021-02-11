@@ -44,7 +44,7 @@ export const Navbar = (props) => {
         <ul>
  
           <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
+            <a style={{color: "rgb(15, 224, 15)"}} href={"https://fur.finance"}>HELLO</a>
           </li>
  
  
@@ -55,13 +55,13 @@ export const Navbar = (props) => {
               style={{color: "rgb(15, 224, 15)"}}
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://app.uniswap.org/#/swap?outputCurrency=${process.env.REACT_APP_FUR_ADDRESS}`}
+              href={`https://app.uniswap.org/#/swap?outputCurrency=0xffb0b6b3845c79c4d1fb54552ac6f5fef96c18fd`}
             >
               TRADE
             </a>
           </li>
           <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="/stake">
+            <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="fur.finance/stake">
             VAULT
             </Link>
           </li>
