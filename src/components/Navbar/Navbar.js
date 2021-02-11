@@ -44,7 +44,7 @@ export const Navbar = (props) => {
         <ul>
  
           <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} to="/">HELLO</Link>
+            <a style={{color: "rgb(15, 224, 15)"}} href={"https://fur.finance"}>HELLO</a>
           </li>
  
  
