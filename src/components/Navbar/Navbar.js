@@ -60,17 +60,7 @@ export const Navbar = (props) => {
               TRADE
             </a>
           </li>
-          <li>
-              <a style={{color: "rgb(15, 224, 15)"}} href={"https://fur.finance/stake"}>VAULT</a>
-          </li>
-           <a
-              style={{color: "rgb(15, 224, 15)"}}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://fur.finance/stake`}
-            >
-              VAULT TEST
-            </a>
+           
           <li>
             <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
               FARMS
