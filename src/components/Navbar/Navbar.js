@@ -61,9 +61,7 @@ export const Navbar = (props) => {
             </a>
           </li>
           <li>
-            <Link style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" to="fur.finance/stake">
-            VAULT
-            </Link>
+              <a style={{color: "rgb(15, 224, 15)"}} href={"https://fur.finance/stake"}>VAULT</a>
           </li>
           <li>
             <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
