@@ -44,7 +44,7 @@ export const Navbar = (props) => {
         <ul>
  
           <li>
-            <a style={{color: "rgb(15, 224, 15)"}} href={"https://fur.finance"}>HELLO</a>
+            <a style={{color: "rgb(15, 224, 15)"}} href={"https://www.fur.finance"}>HELLO</a>
           </li>
  
  
@@ -60,7 +60,11 @@ export const Navbar = (props) => {
               TRADE
             </a>
           </li>
-           
+          <li>
+            <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://www.fur.finance/stake">
+            VAULT
+            </a>
+          </li>
           <li>
             <a style={{color: "rgb(15, 224, 15)"}} className="stakeBTN" href="https://app.fur.finance">
               FARMS
