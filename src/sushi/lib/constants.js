@@ -489,16 +489,16 @@ export const supportedPools = [
   {
     pid: 1,
     lpAddresses: {
-      1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
+      1: '0x838cC44eb793d79dd4D33D8CbE9b58A1556626D4', // LP Token Address
     },
     tokenAddresses: {
-      1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
+      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
       
     },
-    name: "Fish is \n Dai'd 😿",
-    symbol: 'Dai-ETH LP',
+    name: 'Looking Fur Group',
+    symbol: 'FUR-ETH LP',
     tokenSymbol: 'DAI',
-    icon: <img src={fishbone} width="80" height="80"/>,
+    icon: <img src={catImg} width="78" height="78"/>
   },
   {
     pid: 2,
@@ -559,17 +559,18 @@ export const supportedPools = [
    {
     pid: 6,
     lpAddresses: {
-      1: '0x838cC44eb793d79dd4D33D8CbE9b58A1556626D4', // LP Token Address
+      1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
     },
     tokenAddresses: {
-      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
+      1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
       
     },
-    name: 'Looking Fur Group',
-    symbol: 'FUR-ETH LP',
+    name: "Fish is \n Dai'd 😿",
+    symbol: 'Dai-ETH LP',
     tokenSymbol: 'DAI',
-    icon: <img src={catImg} width="78" height="78"/>
+    icon: <img src={fishbone} width="80" height="80"/>,
   },
+   
 ]
 
 
