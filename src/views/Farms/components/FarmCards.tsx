@@ -143,10 +143,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
               <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
             </StyledDetails>
+		  
+		  
             <Spacer />
             <Button
               disabled={!poolActive}
               text={poolActive ? 'Select' : undefined}
+	      style={{ fontSize: '16px' }}
+	      className="btn-link"
               to={`/farms/${farm.id}`}
             >
               {!poolActive && (
@@ -157,6 +161,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
             </Button>
             <StyledInsight>
+		    
+		    
               <StyledInsight className="apy" style={{ color: 'lightpurple', marginBottom: '10%' }}>APY
               
                 {farm.apy
