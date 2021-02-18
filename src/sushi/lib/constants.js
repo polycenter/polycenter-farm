@@ -488,7 +488,7 @@ export const supportedPools = [
   {
     pid: 0,
     lpAddresses: {
-      1: '0xBaCDBe7cd52Bdf11065210863139e9dAd875A896', // LP Token Address
+      1: '0x838cC44eb793d79dd4D33D8CbE9b58A1556626D4', // LP Token Address
     },
     tokenAddresses: {
       1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // "FUR"
