@@ -491,7 +491,7 @@ export const supportedPools = [
       1: '0x838cC44eb793d79dd4D33D8CbE9b58A1556626D4', // LP Token Address
     },
     tokenAddresses: {
-      1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // "FUR"
+      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
       
     },
     name: 'Looking Fur Group',
