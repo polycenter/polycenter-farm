@@ -10,7 +10,7 @@ import 'ui-neumorphism/dist/index.css'
 //style
 import "./NavbarStyle.scss";
  
- //comment
+ 
  
 //logo
 import logophoto from "../../images/logophoto.png";
@@ -57,7 +57,7 @@ export const Navbar = (props) => {
               rel="noopener noreferrer"
               href={`https://app.uniswap.org/#/swap?outputCurrency=0xffb0b6b3845c79c4d1fb54552ac6f5fef96c18fd`}
             >
-              TRADE 
+              TRADE
             </a>
           </li>
           <li>
