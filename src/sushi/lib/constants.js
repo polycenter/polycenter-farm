@@ -486,12 +486,12 @@ export const contractAddresses = {
 
 export const supportedPools = [
   {
-    pid: 0,
+    pid: 1,
     lpAddresses: {
-      1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
+      1: '0x838cc44eb793d79dd4d33d8cbe9b58a1556626d4', // LP Token Address
     },
     tokenAddresses: {
-      1: '0x991f36d2fec39d442ab6ba43f110704414d91b62', // "FUR"
+      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
       
     },
     name: 'Looking Fur Group',
@@ -500,7 +500,7 @@ export const supportedPools = [
     icon: <img src={catImg} width="78" height="78"/>
   },
   {
-    pid: 1,
+    pid: 2,
     lpAddresses: {
       1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
     },
@@ -514,7 +514,7 @@ export const supportedPools = [
     icon: <img src={fishbone} width="80" height="80"/>,
   },
   {
-    pid: 2,
+    pid: 3,
     lpAddresses: {
       1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852', // LP Token Address
     },
@@ -528,7 +528,7 @@ export const supportedPools = [
     icon: <img src={paw} width="75" height="75"/>
   },
   {
-    pid: 3,
+    pid: 4,
     lpAddresses: {
       1: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28', // LP Token Address
     },
@@ -542,7 +542,7 @@ export const supportedPools = [
     icon: <img src={eye} width="75" height="75"/>
   },
   {
-    pid: 4,
+    pid: 5,
     lpAddresses: {
       1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974', // LP Token Address
     },
@@ -556,7 +556,7 @@ export const supportedPools = [
     icon: <img src={yarn} width="70" height="70"/>
   },
   {
-    pid: 5,
+    pid: 6,
     lpAddresses: {
       1: '0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc', // LP Token Address
     },
