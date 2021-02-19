@@ -143,12 +143,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
               <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
             </StyledDetails>
-		  
-		  
             <Spacer />
             <Link type="button"
-
-              
+              onClick={e => e.preventDefault()}
               style={{ fontSize: '16px' }}
               className="btn-link"
               to={`/farms/${farm.id}`}
@@ -161,8 +158,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
             </Link>
             <StyledInsight>
-		    
-		    
               <StyledInsight className="apy" style={{ color: 'lightpurple', marginBottom: '10%' }}>APY
               
                 {farm.apy
