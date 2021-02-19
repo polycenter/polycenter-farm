@@ -485,20 +485,7 @@ export const contractAddresses = {
 
 
 export const supportedPools = [
-  {
-    pid: 1,
-    lpAddresses: {
-      1: '0x838cc44eb793d79dd4d33d8cbe9b58a1556626d4', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
-      
-    },
-    name: 'Looking Fur Group',
-    symbol: 'FUR-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={catImg} width="78" height="78"/>
-  },
+  
   {
     pid: 2,
     lpAddresses: {
@@ -568,6 +555,20 @@ export const supportedPools = [
     symbol: 'USDC-ETH LP',
     tokenSymbol: 'DAI',
     icon: <img src={can} width="70" height="70"/>
+  },
+  {
+    pid: 7,
+    lpAddresses: {
+      1: '0x838cc44eb793d79dd4d33d8cbe9b58a1556626d4', // LP Token Address
+    },
+    tokenAddresses: {
+      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
+      
+    },
+    name: 'Looking Fur Group',
+    symbol: 'FUR-ETH LP',
+    tokenSymbol: 'DAI',
+    icon: <img src={catImg} width="78" height="78"/>
   },
 ]
 
