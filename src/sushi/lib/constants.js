@@ -489,7 +489,7 @@ export const supportedPools = [
   {
     pid: 1,
     lpAddresses: {
-      1: '0x76ba273d28c4d06ce82099bbe8cb5ce512450e13', // LP Token Address
+      1: '0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11', // LP Token Address
     },
     tokenAddresses: {
       1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
