@@ -23,7 +23,7 @@ const Home: React.FC = () => {
     </div>
 
         <Balances />
-        <div className="menuBtn"><Button><Link to={"/farms"} style={{ color: 'lime' }} >🔪 See the Menu</Link></Button></div>
+        <div className="menuBtn"><Button className="menuBtn"><Link to={"/farms"} style={{ color: 'rgb(15, 224, 15)' }} >🔪 See the Menu</Link></Button></div>
      </Card>
      
       
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 }
 
 const StyledInfo = styled.h3`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: 'rgb(15, 224, 15)'
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -46,7 +46,7 @@ const StyledInfo = styled.h3`
   text-align: center;
 
   > b {
-    color: ${(props) => props.theme.color.grey[600]};
+    
   }
 `
 

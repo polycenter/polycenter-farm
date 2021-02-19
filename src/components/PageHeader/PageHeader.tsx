@@ -41,7 +41,7 @@ const StyledIcon = styled.div`
 
 const StyledTitle = styled.h1`
   font-family: 'Kaushan Script', sans-serif;
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime;
   font-size: 36px;
   text-align: center;
   font-weight: 700;
@@ -50,7 +50,7 @@ const StyledTitle = styled.h1`
 `
 
 const StyledSubtitle = styled.h3`
-  color: ${(props) => props.theme.color.grey[600]};
+  color: lime;
   font-size: 18px;
   font-weight: 400;
   margin: 0;

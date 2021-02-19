@@ -1,10 +1,16 @@
+/* body > #root > div {
+  height: 180vh;
+} */
+
 body {
-  background: #fff8ee;
+  background: #e4ebf5;
+  color: rgb(15, 224, 15);
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -105,7 +111,7 @@ code {
   margin: 12px;
   padding: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.42), 0 6px 20px 0 rgba(133, 94, 94, 0.59);
-  background: repeating-linear-gradient( 135deg, #f89191, #f89191 10px, #fc6c6b 10px, #fc6c6b 20px);
+  
 }
 
 .svg-top {
@@ -125,7 +131,7 @@ code {
 }
 
 .r-card2 {
-  background-color: #f1e7cc !important;
+  
   padding: 1rem;
   height: 100%;
   display: flex;
@@ -134,57 +140,57 @@ code {
   border-radius: 16px;
 }
 
-.border {
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
-  background-color: #f1e7cc;
-  padding: 0.5rem;
-  box-shadow: 0 4px 6px 0 rgba(253, 244, 244, 0.42), 0 6px 10px 0 rgba(133, 94, 94, 0.59), inset 4px -4px 10px #000000;
-  border-image: url('./assets/img/wood.jpg') 30 30 stretch !important;
-  border: 15px solid;
-  height: 88%;
-}
 
-.border-dotted {
-  border: dashed 5px #b1b176;
-  background-color: #f1e7cc;
-  border-style: dashed;
-  padding: 0.5rem;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 .btn-link {
-  color: white;
+  color: rgb(15, 224, 15);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 1000px;
   font-weight: 600;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.22), 0 6px 20px 0 rgba(133, 94, 94, 0.39);
-  background: repeating-linear-gradient( 135deg, #00b894, #00b894 10px, #7ed1ba 10px, #7ed1ba 20px);
+  background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
   z-index: 1000 !important;
+  box-shadow: -7px -7px 20px 0px #fff9,
+              -4px -4px 5px 0px #fff9,
+              7px 7px 20px 0px #0002,
+              4px 4px 5px 0px #0001,
+              inset 0px 0px 0px 0px #fff9,
+              inset 0px 0px 0px 0px #0001,
+              inset 0px 0px 0px 0px #fff9,
+              inset 0px 0px 0px 0px #0001;
 }
 
 .bg {
+  color: rgb(15, 224, 15);
   background: #e4ebf5;
   padding-bottom: 135px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-bottom: 20rem;
+  height: 0 auto;
+ 
+  
 }
 
 .nt {
   background-color: #161b22;
-  
   text-shadow: horizontal-shadow vertical-shadow blur rgb(255, 0, 200);
-  padding-bottom: 135px;
+  padding-bottom: 15rem;
+}
+
+.nt .mainCard {
+  height: 50%;
+}
+
+.nt .menuBtn {
+  margin-bottom: 5%;
 }
 
 .color {
@@ -198,13 +204,14 @@ code {
 }
 
 .mainCard {
-  
   display: flex;
   justify-content: center;
   background-color: transparent;
   margin: 0 auto;
-  width: 36rem;
-  height: 27.5rem;
+  margin-top: 5%;
+  width: 0 auto;
+  height: 45%;
+  
 }
 
 .seeTheMenu {
@@ -245,15 +252,42 @@ code {
   84% { color: indigo; }
   100% { color: rgba(238, 130, 238, 0.521); }
   
+  
 }
 
+.farmCards {
+  margin-top: 15%;
+  color: rgb(15, 224, 15);
+  background-color: transparent;
+}
+
+Card {
+  color: rgb(15, 224, 15);
+}
+.cardContainer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
 .menuBtn {
   display: flex;
   justify-content: center;
   margin: 0 auto;   
-  margin-top: 5rem;
-  margin-bottom: .5rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: transparent;
 }
+
+
+@media only screen 
+    and (max-width: 2560px)
+    and (min-height: 1600px) {
+      .nt {
+        padding-bottom: 55rem;
+      }
+    }
+
 
 @media only screen and (max-width: 992px) {
   .img-logo {
@@ -264,3 +298,69 @@ code {
     margin-top: 240px;
   }
 }
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+    /* styles */
+}
+
+/* iPhone XR */
+@media only screen 
+    and (min-device-width: 414px) 
+    and (min-device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+    .mainCard {
+      display: block;
+      margin: 0 auto;
+      bottom-padding: 20rem;
+      height: 100rem;
+    }
+    /* styles */
+}
+
+/* iPhone X */
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+     
+        .card {
+          border: 2px solid red;
+          display: block;
+          width: 0 auto;
+        }
+       .mainCard {
+         display: block;
+         margin: 0 auto;
+         height: 50rem;
+       }
+
+ 
+    /* styles */
+}
+
+@media only screen 
+    and (min-device-width: 785px) 
+    and (min-device-height: 767px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+      .mainCard {
+        border: 2px solid red;
+        display: block;
+        margin: 0 auto;
+        height: 50rem;
+      }
+
+      .card {
+        height: 500rem;
+      }
+    }
