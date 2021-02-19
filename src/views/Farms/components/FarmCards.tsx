@@ -146,19 +146,21 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 		  
 		  
             <Spacer />
-            <Button
+            <Link type="button"
+
               disabled={!poolActive}
               text={poolActive ? 'Select' : undefined}
-	      className="btn-link"
+              style={{ fontSize: '16px' }}
+              className="btn-link"
               to={`/farms/${farm.id}`}
-            >
+            >{poolActive ? 'Select' : undefined}
               {!poolActive && (
                 <Countdown
                   date={new Date(startTime * 1000)}
                   renderer={renderer}
                 />
               )}
-            </Button>
+            </Link>
             <StyledInsight>
 		    
 		    
