@@ -149,7 +149,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <Link type="button"
 
               
-              
               style={{ fontSize: '16px' }}
               className="btn-link"
               to={`/farms/${farm.id}`}

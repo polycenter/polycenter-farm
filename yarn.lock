@@ -6341,7 +6341,7 @@ ethereumjs-abi@0.6.5:
 
 "ethereumjs-abi@git+https://github.com/ethereumjs/ethereumjs-abi.git":
   version "0.6.8"
-  resolved "git+https://github.com/ethereumjs/ethereumjs-abi.git#1ce6a1d64235fabe2aaf827fd606def55693508f"
+  resolved "git+https://github.com/ethereumjs/ethereumjs-abi.git#1a27c59c15ab1e95ee8e5c4ed6ad814c49cc439e"
   dependencies:
     bn.js "^4.11.8"
     ethereumjs-util "^6.0.0"
@@ -10202,7 +10202,7 @@ node-releases@^1.1.52, node-releases@^1.1.69:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.70.tgz"
   integrity sha512-Slf2s69+2/uAD79pVVQo8uSiC34+g8GWY8UH2Qtqv34ZfhYrxpYpfzs9Js9d6O0mbDmALuxaTlplnBTnSELcrw==
 
-node-sass@4.14.1:
+node-sass@^4.14.1:
   version "4.14.1"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.14.1.tgz"
   integrity sha512-sjCuOlvGyCJS40R8BscF5vhVlQjNN069NtQ1gSxyK1u9iqvn6tf7O1R4GNowVZfiZUCRt5MmMs1xd+4V/7Yr0g==
