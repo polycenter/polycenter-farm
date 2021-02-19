@@ -148,8 +148,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <Spacer />
             <Link type="button"
 
-              disabled={!poolActive}
-              text={poolActive ? 'Select' : undefined}
+              
+              
               style={{ fontSize: '16px' }}
               className="btn-link"
               to={`/farms/${farm.id}`}
