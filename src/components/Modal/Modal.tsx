@@ -7,9 +7,14 @@ export interface ModalProps {
 
 const Modal: React.FC = ({ children }) => {
   return (
-    <StyledResponsiveWrapper>
-      <StyledModal>{children}</StyledModal>
-    </StyledResponsiveWrapper>
+    <div className="w-full h-full bg-green-500 bg-opacity-80 flex z-100">
+      <div className="m-auto bg-white rounded shadow-lg p-6">{children}</div>
+    </div>
+    // <div className="bg-red-400">
+    //   <StyledResponsiveWrapper>
+    //     <StyledModal>{children}</StyledModal>
+    //   </StyledResponsiveWrapper>
+    // </div>
   )
 }
 
@@ -29,7 +34,8 @@ const StyledResponsiveWrapper = styled.div`
   justify-content: flex-end;
   position: relative;
   width: 100%;
-  margin-top:160px;
+  margin-top: 160px;
+  background-color: white;
   max-width: 800px;
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
     flex: 1;
