@@ -10,11 +10,11 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .onoffswitch {
@@ -48,7 +48,8 @@ code {
   transition: margin 0.3s ease-in 0s;
 }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
   display: block;
   float: left;
   width: 50%;
@@ -63,16 +64,16 @@ code {
 }
 
 .onoffswitch-inner:before {
-  content: "Night";
+  content: 'Night';
   padding-left: 10px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #999999;
 }
 
 .onoffswitch-inner:after {
-  content: "Day";
+  content: 'Day';
   padding-right: 10px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #999999;
   text-align: right;
 }
@@ -82,7 +83,7 @@ code {
   width: 18px;
   margin: 6px;
   height: 18px;
-  background: #FFFFFF;
+  background: #ffffff;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -92,11 +93,11 @@ code {
   transition: all 0.3s ease-in 0s;
 }
 
-.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0;
 }
 
-.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
 }
 
@@ -110,13 +111,13 @@ code {
   border-radius: 80px;
   margin: 12px;
   padding: 12px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.42), 0 6px 20px 0 rgba(133, 94, 94, 0.59);
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.42),
+    0 6px 20px 0 rgba(133, 94, 94, 0.59);
 }
 
 .svg-top {
   position: absolute;
- top: 30px;
+  top: 30px;
   z-index: 1 !important;
 }
 
@@ -131,7 +132,6 @@ code {
 }
 
 .r-card2 {
-  
   padding: 1rem;
   height: 100%;
   display: flex;
@@ -139,10 +139,6 @@ code {
   justify-content: center;
   border-radius: 16px;
 }
-
-
-
-
 
 .btn-link {
   color: rgb(15, 224, 15);
@@ -154,15 +150,11 @@ code {
   outline: none;
   border: none;
   cursor: pointer;
-  z-index: 1000 !important;
-  box-shadow: -7px -7px 20px 0px #fff9,
-              -4px -4px 5px 0px #fff9,
-              7px 7px 20px 0px #0002,
-              4px 4px 5px 0px #0001,
-              inset 0px 0px 0px 0px #fff9,
-              inset 0px 0px 0px 0px #0001,
-              inset 0px 0px 0px 0px #fff9,
-              inset 0px 0px 0px 0px #0001;
+  /* z-index: 1000 !important; */
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
 }
 
 .bg {
@@ -175,8 +167,6 @@ code {
   background-size: cover;
   padding-bottom: 20rem;
   height: 0 auto;
- 
-  
 }
 
 .nt {
@@ -195,7 +185,7 @@ code {
 
 .color {
   text-align: center;
-  color: #4D3A40;
+  color: #4d3a40;
 }
 
 .img-logo {
@@ -211,7 +201,6 @@ code {
   margin-top: 5%;
   width: 0 auto;
   height: 45%;
-  
 }
 
 .seeTheMenu {
@@ -231,7 +220,7 @@ code {
   padding: 1rem;
   margin: 1rem;
   animation: color-change 5s infinite;
- color: rgb(26, 117, 117);
+  color: rgb(26, 117, 117);
   background-color: transparent;
 }
 
@@ -239,20 +228,32 @@ code {
   padding: 1rem;
   margin: 1rem;
   animation: color-change 5s infinite;
- color:rgb(26, 117, 117);
+  color: rgb(26, 117, 117);
   background-color: transparent;
 }
 
 @keyframes color-change {
-  14% { color: rgb(37, 150, 150); }
-  28% { color: rgb(224, 18, 196); }
-  42% { color: rgb(190, 0, 0); }
-  56% { color: rgba(0, 255, 0, 0.39); }
-  70% { color: rgba(0, 0, 255, 0.589); }
-  84% { color: indigo; }
-  100% { color: rgba(238, 130, 238, 0.521); }
-  
-  
+  14% {
+    color: rgb(37, 150, 150);
+  }
+  28% {
+    color: rgb(224, 18, 196);
+  }
+  42% {
+    color: rgb(190, 0, 0);
+  }
+  56% {
+    color: rgba(0, 255, 0, 0.39);
+  }
+  70% {
+    color: rgba(0, 0, 255, 0.589);
+  }
+  84% {
+    color: indigo;
+  }
+  100% {
+    color: rgba(238, 130, 238, 0.521);
+  }
 }
 
 .farmCards {
@@ -273,94 +274,69 @@ Card {
 .menuBtn {
   display: flex;
   justify-content: center;
-  margin: 0 auto;   
+  margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
   background: transparent;
 }
 
-
-@media only screen 
-    and (max-width: 2560px)
-    and (min-height: 1600px) {
-      .nt {
-        padding-bottom: 55rem;
-      }
-    }
-
+@media only screen and (max-width: 2560px) and (min-height: 1600px) {
+  .nt {
+    padding-bottom: 55rem;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .img-logo {
     width: 80%;
   }
 
-  .svg-top{
+  .svg-top {
     margin-top: 240px;
   }
 }
 
-@media only screen 
-    and (min-device-width: 375px) 
-    and (min-device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 3)
-    and (orientation: portrait) { 
-    /* styles */
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  /* styles */
 }
 
 /* iPhone XR */
-@media only screen 
-    and (min-device-width: 414px) 
-    and (min-device-height: 896px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (orientation: portrait) { 
-
-    .mainCard {
-      display: block;
-      margin: 0 auto;
-      bottom-padding: 20rem;
-      height: 100rem;
-    }
-    /* styles */
+@media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  .mainCard {
+    display: block;
+    margin: 0 auto;
+    bottom-padding: 20rem;
+    height: 100rem;
+  }
+  /* styles */
 }
 
 /* iPhone X */
 
-@media only screen 
-    and (min-device-width: 375px) 
-    and (min-device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (orientation: portrait) { 
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  .card {
+    border: 2px solid red;
+    display: block;
+    width: 0 auto;
+  }
+  .mainCard {
+    display: block;
+    margin: 0 auto;
+    height: 50rem;
+  }
 
-     
-        .card {
-          border: 2px solid red;
-          display: block;
-          width: 0 auto;
-        }
-       .mainCard {
-         display: block;
-         margin: 0 auto;
-         height: 50rem;
-       }
-
- 
-    /* styles */
+  /* styles */
 }
 
-@media only screen 
-    and (min-device-width: 785px) 
-    and (min-device-height: 767px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (orientation: portrait) { 
+@media only screen and (min-device-width: 785px) and (min-device-height: 767px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  .mainCard {
+    border: 2px solid red;
+    display: block;
+    margin: 0 auto;
+    height: 50rem;
+  }
 
-      .mainCard {
-        border: 2px solid red;
-        display: block;
-        margin: 0 auto;
-        height: 50rem;
-      }
-
-      .card {
-        height: 500rem;
-      }
-    }
+  .card {
+    height: 500rem;
+  }
+}
