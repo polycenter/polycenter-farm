@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Countdown, { CountdownRenderProps } from 'react-countdown'
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, ThemeContext } from 'styled-components'
 import { useWallet } from 'use-wallet'
 import Button from '../../../components/Button'
 import { Card } from 'ui-neumorphism'
@@ -20,6 +20,7 @@ import useSushi from '../../../hooks/useSushi'
 import { getEarned, getMasterChefContract } from '../../../sushi/utils'
 import { bnToDec } from '../../../utils'
 import { divide } from 'numeral'
+import NightModeContext from '../../../contexts/NightModeContext'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
   apy: BigNumber
@@ -88,6 +89,8 @@ interface FarmCardProps {
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
+  const { isNight }: any = useContext(NightModeContext)
+
   const [startTime, setStartTime] = useState(0)
   const [harvestable, setHarvestable] = useState(0)
 
@@ -125,7 +128,11 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 
   return (
-    <div className="border shadow-lg p-6 rounded-lg space-y-6">
+    <div
+      className={`border shadow-lg p-6 rounded-lg space-y-6  ${
+        isNight ? 'text-white' : 'text-black'
+      }`}
+    >
       <div className="space-y-4">
         <div className="flex flex-1 items-center justify-center mx-auto text-center">
           {farm.icon}
@@ -155,7 +162,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className={`grid grid-cols-3 gap-2`}>
         <div className="rounded border p-1">
           <p className="text-xs">APY</p>
           <p>

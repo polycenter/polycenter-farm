@@ -68,11 +68,7 @@ const Farm: React.FC = () => {
           </StyledCardWrapper>
           <Spacer />
           <StyledCardWrapper>
-            <Stake
-              lpContract={lpContract}
-              pid={pid}
-              tokenName={lpToken}
-            />
+            <Stake lpContract={lpContract} pid={pid} tokenName={lpToken} />
           </StyledCardWrapper>
         </StyledCardsWrapper>
         <Spacer size="lg" />
@@ -83,7 +79,7 @@ const Farm: React.FC = () => {
         <Spacer size="md" />
         <StyledLink
           target="__blank"
-          href={`https://sushiswap.vision/pair/${lpTokenAddress}`}
+          href={`https://app.uniswap.org/#/add/ETH/${lpTokenAddress}`}
         >
           {lpTokenName} Info
         </StyledLink>

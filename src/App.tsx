@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { UseWalletProvider } from 'use-wallet'
@@ -13,15 +13,16 @@ import useModal from './hooks/useModal'
 import theme from './theme'
 import Farms from './views/Farms'
 import Home from './views/Home'
-import Staking from "./views/Staking";
+import Staking from './views/Staking'
 import { CHAIN_ID } from './sushi/lib/constants'
 import { Navbar } from './components/Navbar/Navbar'
-import BG from './assets/img/bg.jpg';
+import BG from './assets/img/bg.jpg'
 import 'ui-neumorphism/dist/index.css'
+import { NightModeProvider } from './contexts/NightModeContext'
 
 const App: React.FC = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [isNight, setNight] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const [isNight, setNight] = useState(false)
 
   const handleDismissMobileMenu = useCallback(() => {
     setMobileMenu(false)
@@ -32,26 +33,34 @@ const App: React.FC = () => {
   }, [setMobileMenu])
 
   return (
-    <div className={isNight ? 'nt' : 'bg'} style={{
-      color: isNight ? '#e4ebf5e' : '#363636', backgroundRepeat: 'repeat', position: 'relative'
-    }}>
-      
-      <Providers>
-        <Router>
-          <Navbar isNight={isNight} setNight={setNight} />
-          <MobileMenu onDismiss={handleDismissMobileMenu} visible={mobileMenu} />
-         
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/farms">
-              <Farms />
-            </Route>
-          </Switch>
-        </Router>
-      </Providers>
+    <div
+      className={isNight ? 'nt' : 'bg'}
+      style={{
+        color: isNight ? '#e4ebf5e' : '#363636',
+        backgroundRepeat: 'repeat',
+        position: 'relative',
+      }}
+    >
+      <NightModeProvider value={{ isNight }}>
+        <Providers>
+          <Router>
+            <Navbar isNight={isNight} setNight={setNight} />
+            <MobileMenu
+              onDismiss={handleDismissMobileMenu}
+              visible={mobileMenu}
+            />
 
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/farms">
+                <Farms />
+              </Route>
+            </Switch>
+          </Router>
+        </Providers>
+      </NightModeProvider>
     </div>
   )
 }
@@ -91,7 +100,7 @@ const Disclaimer: React.FC = () => {
     if (!seenDisclaimer) {
       onPresentDisclaimerModal()
     }
-  }, [])
+  }, [onPresentDisclaimerModal])
 
   return <div />
 }
