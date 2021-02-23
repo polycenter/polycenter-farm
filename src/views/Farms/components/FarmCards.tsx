@@ -19,6 +19,7 @@ import useFarms from '../../../hooks/useFarms'
 import useSushi from '../../../hooks/useSushi'
 import { getEarned, getMasterChefContract } from '../../../sushi/utils'
 import { bnToDec } from '../../../utils'
+import { divide } from 'numeral'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
   apy: BigNumber
@@ -33,7 +34,7 @@ const FarmCards: React.FC = () => {
     ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
   )
 
-  console.log(stakedValue);
+  console.log(stakedValue)
 
   const sushiPrice =
     sushiIndex >= 0 && stakedValue[sushiIndex]
@@ -50,10 +51,10 @@ const FarmCards: React.FC = () => {
         ...stakedValue[i],
         apy: stakedValue[i]
           ? sushiPrice
-            .times(SUSHI_PER_BLOCK)
-            .times(BLOCKS_PER_YEAR)
-            .times(stakedValue[i].poolWeight)
-            .div(stakedValue[i].totalWethValue)
+              .times(SUSHI_PER_BLOCK)
+              .times(BLOCKS_PER_YEAR)
+              .times(stakedValue[i].poolWeight)
+              .div(stakedValue[i].totalWethValue)
           : null,
       }
       const newFarmRows = [...farmRows]
@@ -68,24 +69,17 @@ const FarmCards: React.FC = () => {
   )
 
   return (
-    <StyledCards>
+    <div className="grid grid-cols-3 gap-8 mt-12">
       {!!rows[0].length ? (
-        rows.map((farmRow, i) => (
-          <StyledRow key={i}>
-            {farmRow.map((farm, j) => (
-              <React.Fragment key={j}>
-                <FarmCard farm={farm} />
-                {(j === 0 || j === 1) && <StyledSpacer />}
-              </React.Fragment>
-            ))}
-          </StyledRow>
-        ))
+        rows.map((farmRow, i) =>
+          farmRow.map((farm, j) => <FarmCard farm={farm} />),
+        )
       ) : (
-          <StyledLoadingWrapper>
-            <Loader text="Cooking the rice ..." />
-          </StyledLoadingWrapper>
-        )}
-    </StyledCards>
+        <StyledLoadingWrapper>
+          <Loader text="Cooking the rice ..." />
+        </StyledLoadingWrapper>
+      )}
+    </div>
   )
 }
 
@@ -131,62 +125,129 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 
   return (
-    <StyledCardWrapper className="cardContainer">
+    <div className="border shadow-lg p-6 rounded-lg space-y-6">
+      <div className="space-y-4">
+        <div className="flex flex-1 items-center justify-center mx-auto text-center">
+          {farm.icon}
+        </div>
+        <StyledTitle>{farm.name}</StyledTitle>
+      </div>
+      <div className="text-center font-medium text-xs flex flex-row space-x-2">
+        <p>Deposit {farm.lpToken}</p>
+        <p>&rarr;</p>
+        <p>Earn {farm.earnToken.toUpperCase()}</p>
+      </div>
 
-      {farm.tokenSymbol === 'DAI' && <StyledCardAccent />}
-      <Card className="farmCards">
-        <CardContent>
-          <StyledContent>
-            <CardIcon >{farm.icon}</CardIcon>
-            <StyledTitle>{farm.name}</StyledTitle>
-            <StyledDetails>
-              <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
-              <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
-            </StyledDetails>
-            <Spacer />
-            <Button
-              disabled={!poolActive}
-              text={poolActive ? 'Select' : undefined}
-              to={`/farms/${farm.id}`}
-            >
-              {!poolActive && (
-                <Countdown
-                  date={new Date(startTime * 1000)}
-                  renderer={renderer}
-                />
-              )}
-            </Button>
-            <StyledInsight>
-              <StyledInsight className="apy" style={{ color: 'lightpurple', marginBottom: '10%' }}>APY
-              
-                {farm.apy
-                  ? `${farm.apy
-                    .times(new BigNumber(100))
-                    .times(new BigNumber(3))
-                    .toNumber()
-                    .toLocaleString('en-US')
-                    .slice(0, -1)}%`
-                  : 'Loading ...'}
-              
-              </StyledInsight>
-              <StyledInsight style={{ marginBottom: '10%' }}>
-                {farm.tokenAmount
-                  ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
-                  : '-'}{' '}
-                {farm.tokenSymbol}
-              </StyledInsight>
-              <StyledInsight style={{ marginBottom: '10%' }}>
-                {farm.wethAmount
-                  ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
-                  : '-'}{' '}
-                ETH
-              </StyledInsight>
-            </StyledInsight>
-          </StyledContent>
-        </CardContent>
-      </Card>
-    </StyledCardWrapper>
+      <div>
+        <Link to={`/farms/${farm.id}`}>
+          <button
+            className="block p-2 border-white shadow rounded-lg w-full font-medium text-lg"
+            disabled={!poolActive}
+          >
+            {!poolActive && (
+              <Countdown
+                date={new Date(startTime * 1000)}
+                renderer={renderer}
+              />
+            )}
+            {poolActive && 'Select'}
+          </button>
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-3 gap-2">
+        <div className="rounded border p-1">
+          <p className="text-xs">APY</p>
+          <p>
+            {farm.apy
+              ? `${farm.apy
+                  .times(new BigNumber(100))
+                  .times(new BigNumber(3))
+                  .toNumber()
+                  .toLocaleString('en-US')
+                  .slice(0, -1)}%`
+              : 'Loading ...'}
+          </p>
+        </div>
+        <div className="rounded border p-1">
+          <p className="text-xs">{farm.tokenSymbol}</p>
+
+          <p>
+            {farm.tokenAmount
+              ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
+              : '-'}{' '}
+          </p>
+        </div>
+        <div className="rounded border p-1">
+          <p className="text-xs">ETH</p>
+
+          <p>
+            {farm.wethAmount
+              ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
+              : '-'}{' '}
+          </p>
+        </div>
+      </div>
+    </div>
   )
+  // return (
+  // <div>
+  //   {farm.tokenSymbol === 'DAI' && <StyledCardAccent />}
+  //   <Card className="farmCards">
+  //     <CardContent>
+  //       <StyledContent>
+  //         <CardIcon>{farm.icon}</CardIcon>
+  //         <StyledTitle>{farm.name}</StyledTitle>
+  //         <StyledDetails>
+  //           <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
+  //           <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
+  //         </StyledDetails>
+  //         <Spacer />
+  //         <button
+  //           className="p-2 border-white shadow rounded-lg w-full font-medium text-lg"
+  //           disabled={!poolActive}
+  //         >
+  //           {!poolActive && (
+  //             <Countdown
+  //               date={new Date(startTime * 1000)}
+  //               renderer={renderer}
+  //             />
+  //           )}
+  //           {poolActive && 'Select'}
+  //         </button>
+  //         <StyledInsight>
+  //           <StyledInsight
+  //             className="apy"
+  //             style={{ color: 'lightpurple', marginBottom: '10%' }}
+  //           >
+  //             APY
+  //             {farm.apy
+  //               ? `${farm.apy
+  //                   .times(new BigNumber(100))
+  //                   .times(new BigNumber(3))
+  //                   .toNumber()
+  //                   .toLocaleString('en-US')
+  //                   .slice(0, -1)}%`
+  //               : 'Loading ...'}
+  //           </StyledInsight>
+  //           <StyledInsight style={{ marginBottom: '10%' }}>
+  //             {farm.tokenAmount
+  //               ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
+  //               : '-'}{' '}
+  //             {farm.tokenSymbol}
+  //           </StyledInsight>
+  //           <StyledInsight style={{ marginBottom: '10%' }}>
+  //             {farm.wethAmount
+  //               ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
+  //               : '-'}{' '}
+  //             ETH
+  //           </StyledInsight>
+  //         </StyledInsight>
+  //       </StyledContent>
+  //     </CardContent>
+  //   </Card>
+  // </div>
+  // )
 }
 
 const RainbowLight = keyframes`
@@ -231,7 +292,7 @@ const StyledCardAccent = styled.div`
 
 const StyledCards = styled.div`
   width: 900px;
-  margin-bottom:80px;
+  margin-bottom: 80px;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -271,20 +332,31 @@ const StyledTitle = styled.h4`
   text-align: center;
 
   @keyframes color-change {
-    14% { color: rgb(37, 150, 150); }
-    28% { color: rgb(224, 18, 196); }
-    42% { color: rgb(190, 0, 0); }
-    56% { color: rgba(0, 255, 0, 0.39); }
-    70% { color: rgba(0, 0, 255, 0.589); }
-    84% { color: indigo; }
-    100% { color: rgba(238, 130, 238, 0.521); }
-    
+    14% {
+      color: rgb(37, 150, 150);
+    }
+    28% {
+      color: rgb(224, 18, 196);
+    }
+    42% {
+      color: rgb(190, 0, 0);
+    }
+    56% {
+      color: rgba(0, 255, 0, 0.39);
+    }
+    70% {
+      color: rgba(0, 0, 255, 0.589);
+    }
+    84% {
+      color: indigo;
+    }
+    100% {
+      color: rgba(238, 130, 238, 0.521);
+    }
   }
 `
 
 const StyledContent = styled.div`
-
-  
   color: lime;
   align-items: center;
   display: flex;
@@ -299,13 +371,11 @@ const StyledSpacer = styled.div`
 const StyledDetails = styled.div`
   margin-top: ${(props) => props.theme.spacing[2]}px;
   text-align: center;
- 
 `
 
 const StyledDetail = styled.div`
   color: lime;
   text-align: center;
-  
 `
 
 const StyledInsight = styled.div`
