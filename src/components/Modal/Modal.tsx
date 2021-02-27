@@ -8,13 +8,10 @@ export interface ModalProps {
 const Modal: React.FC = ({ children }) => {
   return (
     <div className="w-full h-full bg-green-500 bg-opacity-80 flex z-100">
-      <div className="m-auto bg-white rounded shadow-lg p-6">{children}</div>
+      <div className="m-auto bg-white rounded shadow-lg p-6">
+        <StyledModal>{children}</StyledModal>
+      </div>
     </div>
-    // <div className="bg-red-400">
-    //   <StyledResponsiveWrapper>
-    //     <StyledModal>{children}</StyledModal>
-    //   </StyledResponsiveWrapper>
-    // </div>
   )
 }
 
