@@ -47,7 +47,7 @@ export const Navbar = (props) => {
             <li>
               <a
                 style={{ color: 'rgb(15, 224, 15)' }}
-                href={'https://www.fur.finance'}
+                href={'https://polycenter.io/#/'}
               >
                 HELLO
               </a>
@@ -58,7 +58,7 @@ export const Navbar = (props) => {
                 style={{ color: 'rgb(15, 224, 15)' }}
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`https://app.uniswap.org/#/swap?outputCurrency=0xffb0b6b3845c79c4d1fb54552ac6f5fef96c18fd`}
+                href={`https://polycenter.io/#/governance`}
               >
                 TRADE
               </a>
@@ -67,7 +67,7 @@ export const Navbar = (props) => {
               <a
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                href="https://www.fur.finance/stake"
+                href="https://app.polycenter.exchange/"
               >
                 VAULT
               </a>
@@ -76,7 +76,7 @@ export const Navbar = (props) => {
               <a
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                href="https://app.fur.finance"
+                href="https://app.polycenter.exchange/"
               >
                 FARMS
               </a>
@@ -85,9 +85,9 @@ export const Navbar = (props) => {
               <Link
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                to=""
+                href="https://t.me/PolyCenter"
               >
-                GROUP-FI
+                TELEGRAM
               </Link>
             </li>
 
