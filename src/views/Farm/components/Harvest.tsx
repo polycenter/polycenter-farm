@@ -25,9 +25,9 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
       <CardContent >
         <StyledCardContentInner style={{color: 'rgb(15, 224, 15)' }}>
           <StyledCardHeader style={{color: 'rgb(15, 224, 15)' }}>
-            <CardIcon >🐱</CardIcon>
+            <CardIcon >🐋</CardIcon>
             <Value value={getBalanceNumber(earnings)} />
-            <Label text="YFUR Earned" />
+            <Label text="POLYC Earned" />
           </StyledCardHeader>
           <StyledCardActions 
             style={{color: 'rgb(15, 224, 15)' }}>
