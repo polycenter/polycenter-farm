@@ -67,7 +67,7 @@ export const Navbar = (props) => {
               <a
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                href="https://app.polycenter.exchange/"
+                href="https://app.polycenter.io/"
               >
                 VAULT
               </a>
@@ -76,7 +76,7 @@ export const Navbar = (props) => {
               <a
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                href="https://app.polycenter.exchange/"
+                href="https://app.polycenter.io/"
               >
                 FARMS
               </a>
@@ -85,9 +85,9 @@ export const Navbar = (props) => {
               <Link
                 style={{ color: 'rgb(15, 224, 15)' }}
                 className="stakeBTN"
-                href="https://t.me/PolyCenter"
+                href="/"
               >
-                TELEGRAM
+                
               </Link>
             </li>
 
