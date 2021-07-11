@@ -74,12 +74,12 @@ const Farm: React.FC = () => {
         <Spacer size="lg" />
         <StyledInfo>
           ⭐️ Every time you stake and unstake LP tokens, the contract will
-          automagically harvest YFUR rewards for you!
+          automagically harvest POLYC rewards for you!
         </StyledInfo>
         <Spacer size="md" />
         <StyledLink
           target="__blank"
-          href={`https://app.uniswap.org/#/add/ETH/${lpTokenAddress}`}
+          href={`https://exchange.pancakeswap.finance/#/add/ETH/${lpTokenAddress}`}
         >
           {lpTokenName} Info
         </StyledLink>
