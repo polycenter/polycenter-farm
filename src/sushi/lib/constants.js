@@ -459,100 +459,37 @@ SLP Address on mainnet for reference
 
 // JUICYSWAP SETTINGS
 
-export const CHAIN_ID = 1
+export const CHAIN_ID = 56
 
 export const contractAddresses = {
   sushi: {
-    1: '0xffb0B6b3845c79C4D1fB54552Ac6F5feF96c18Fd',
+    56: '0x13Ce95E2371DFe33E029E8C0Aa4A3E85F52dA469',
   },
   masterChef: {
-    1: '0x755Ec6E682215F146d8EADa0e49f48A0Ffc2f244',
+    56: '0xcabf9119D880949a6eDf753204478554ede46aA2',
   },
   weth: {
-    1: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
   },
   xSushi: {
-    1: '0x8798249c2e607446efb7ad49ec89dd1865ff4272', // NOTE: Not in use
-  },
+    56: '0x8798249c2e607446efb7ad49ec89dd1865ff4272' // NOTE: Not in use
+  }
 }
+
+
 
 export const supportedPools = [
   {
-    pid: 6,
+    pid: 0,
     lpAddresses: {
-      1: '0x838cc44eb793d79dd4d33d8cbe9b58a1556626d4', // LP Token Address
+      56: '0xBed9F1A80b0706D40E3E6d4892844d75595B4e71', // LP Token Address
     },
     tokenAddresses: {
-      1: '0xbacdbe7cd52bdf11065210863139e9dad875a896', // "FUR"
+      56: '0x13Ce95E2371DFe33E029E8C0Aa4A3E85F52dA469', // Token, i.e. "DAI"
     },
-    name: 'Looking Fur Group',
-    symbol: 'FUR-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={catImg} width="78" height="78" />,
-  },
-  {
-    pid: 1,
-    lpAddresses: {
-      1: '0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0x6b175474e89094c44da98b954eedeac495271d0f', // "DAI"
-    },
-    name: "Fish is \n Dai'd 😿",
-    symbol: 'Dai-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={fishbone} width="80" height="80" />,
-  },
-  {
-    pid: 2,
-    lpAddresses: {
-      1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0xdac17f958d2ee523a2206206994597c13d831ec7', // "Tether"
-    },
-    name: 'mOnEy pRinteR!!!!',
-    symbol: 'USDT-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={paw} width="75" height="75" />,
-  },
-  {
-    pid: 3,
-    lpAddresses: {
-      1: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', // "YFI"
-    },
-    name: 'Y-F-EYE',
-    symbol: 'YFI-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={eye} width="75" height="75" />,
-  },
-  {
-    pid: 4,
-    lpAddresses: {
-      1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0x514910771af9ca656af840dff83e8264ecf986ca', // "LINK"
-    },
-    name: 'Yarn Link',
-    symbol: 'LINK-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={yarn} width="70" height="70" />,
-  },
-  {
-    pid: 5,
-    lpAddresses: {
-      1: '0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc', // LP Token Address
-    },
-    tokenAddresses: {
-      1: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // "UDSC"
-    },
-    name: 'Made in America',
-    symbol: 'USDC-ETH LP',
-    tokenSymbol: 'DAI',
-    icon: <img src={can} width="70" height="70" />,
+    name: 'Poly Center !',
+    symbol: 'POLYC-BNB LP',
+    tokenSymbol: 'POLYC',
+    icon: '🐋',
   },
 ]
