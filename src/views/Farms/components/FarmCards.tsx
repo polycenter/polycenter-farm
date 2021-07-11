@@ -186,7 +186,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
           </p>
         </div>
         <div className="rounded border p-1">
-          <p className="text-xs">ETH</p>
+          <p className="text-xs">BNB</p>
 
           <p>
             {farm.wethAmount
